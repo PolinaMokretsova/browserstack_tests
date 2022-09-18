@@ -1,9 +1,9 @@
 {
     "base": {
-        "project": "qaguru python browserstack",
+        "project": "browserstack_tests",
         "environment": "Prod",
         "comment": "",
-        "reportLink": "https://jenkins.autotests.cloud/job/tests_mobile_browserstack/",
+        "reportLink": "https://jenkins.autotests.cloud/job/browserstack_tests/",
         "language": "en",
         "allureFolder": "allure-report/",
         "enableChart": true
