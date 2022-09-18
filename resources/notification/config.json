@@ -1,0 +1,16 @@
+{
+    "base": {
+        "project": "qaguru python browserstack",
+        "environment": "Prod",
+        "comment": "",
+        "reportLink": "https://jenkins.autotests.cloud/job/tests_mobile_browserstack/",
+        "language": "en",
+        "allureFolder": "allure-report/",
+        "enableChart": true
+    },
+    "telegram": {
+        "token": "5469385155:AAHyQhkErEOdi8NT0m5NnoWAhkj6eRQIqro",
+        "chat": "-638095156",
+        "replyTo": ""
+    }
+}
