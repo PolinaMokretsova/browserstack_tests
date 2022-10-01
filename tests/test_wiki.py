@@ -1,33 +1,32 @@
 import allure
 from allure_commons._allure import step
 from appium.webdriver.common.appiumby import AppiumBy
-from selene import have
+from selene import have, be
 from selene.support.shared import browser
 
-from util.attachment import add_video
 
+@allure.tag('Appium Pixel 4 API 30')
+@allure.title('Search on Wikipedia')
+def test_wikipedia_search():
 
-@allure.tag('mobile')
-@allure.title('Test search')
-def test_wiki_browserstack(app_android):
-    with step('Type search'):
-        browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type('BrowserStack')
-    with step('Verify content found'):
-        browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title'))\
-            .should(have.size_greater_than(0))
-    add_video(browser)
+    with step('First page'):
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/primaryTextView")) \
+            .should(have.text("The Free Encyclopedia"))
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click()
 
+    with step('Second page'):
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/primaryTextView")) \
+            .should(have.text("New ways to explore"))
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click()
 
-@allure.tag('mobile')
-@allure.title('Test search')
-def test_wiki_sqa(app_android):
-    with step('Type search'):
-        browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Software quality assurance")
-    with step('Verify content found'):
-        browser.all(
-            (AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title')
-        ).should(have.size_greater_than(0))
-    add_video(browser)
+    with step('Third page'):
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/primaryTextView")) \
+            .should(have.exact_text("Reading lists with sync"))
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click()
 
+    with step('Fourth page'):
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/primaryTextView")) \
+            .should(have.text("Send anonymous data"))
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/fragment_onboarding_done_button")).click()
+        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_container")) \
+            .should(be.visible)

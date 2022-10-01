@@ -4,4 +4,5 @@ allure-pytest
 python-dotenv==0.20.0
 Appium-Python-Client~=2.6.1
 selenium~=4.2.0
-requests
+requests~=2.28.1
+pydantic~=1.10.2
