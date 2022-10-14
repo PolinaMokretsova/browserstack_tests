@@ -7,8 +7,6 @@ from selene.support.shared import browser
 from util.attachment import add_video
 
 
-@allure.tag('mobile')
-@allure.title('Test search browserstack')
 def test_wiki_search(app_android):
     with step('Type search browserstack'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
@@ -19,8 +17,6 @@ def test_wiki_search(app_android):
     add_video(browser)
 
 
-@allure.tag('mobile')
-@allure.title('Test search qa')
 def test_wiki_sqa(app_android):
     with step('Type search qa'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
@@ -32,8 +28,6 @@ def test_wiki_sqa(app_android):
     add_video(browser)
 
 
-@allure.tag('mobile')
-@allure.title('Test search browserstack')
 def test_wiki_appium(app_android):
     with step('Type search appium'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
@@ -45,8 +39,6 @@ def test_wiki_appium(app_android):
     add_video(browser)
 
 
-@allure.tag('mobile')
-@allure.title('Test search browserstack')
 def test_wiki_api_search(app_android):
     with step('Type search api'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
@@ -58,8 +50,6 @@ def test_wiki_api_search(app_android):
     add_video(browser)
 
 
-@allure.tag('mobile')
-@allure.title('Test search browserstack')
 def test_wiki_selenium_search(app_android):
     with step('Type search android'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
