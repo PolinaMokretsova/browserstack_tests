@@ -39,7 +39,8 @@
 <a name="запуск_дженкинс"></a>
 # Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/browserstack_tests/) выглядит следующим образом
 Главная страница сборки
-![](jenkins_browserstack/jenkins_mobile.png)
+![](media/jenkins_mobile.png)
+
 [К оглавлению ⬆](#оглавление)
 
 <a name="report"></a>
