@@ -1,4 +1,4 @@
-# Проект автотестов на мобильное приложение [Wikipedia] (https://www.wikipedia.org/)
+# Проект автотестов на мобильное приложение [Wikipedia](https://www.wikipedia.org/)
 Проект mobile автотестов мобильного приложения Wikipedia
 
 <a name="оглавление"></a>
