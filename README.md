@@ -24,8 +24,8 @@
 <img width="16%" title="IntelliJ IDEA" src="media/appium.svg">
 <img width="14%" title="Browserstack" src="media/browserstack.svg">
 <img width="16%" title="Allure Report" src="media/allure.svg">
-<img width="16%" title="GitHub" src="media/GitHub.svg">
-<img width="16%" title="Jenkins" src="media/Jenkins.svg">
+<img width="16%" title="GitHub" src="media/github.svg">
+<img width="16%" title="Jenkins" src="media/jenkins.svg">
 <img width="15%" title="Allure TestOps" src="media/allure testops.svg">
 </p>
 
