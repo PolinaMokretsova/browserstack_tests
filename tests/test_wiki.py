@@ -7,7 +7,7 @@ from selene.support.shared import browser
 from util.attachment import add_video
 
 
-def test_wiki_search(app_android):
+def test_wiki_search():
     with step('Type search browserstack'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type('BrowserStack')
@@ -17,7 +17,7 @@ def test_wiki_search(app_android):
     add_video(browser)
 
 
-def test_wiki_sqa(app_android):
+def test_sqa_search():
     with step('Type search qa'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Software quality assurance")
@@ -28,7 +28,7 @@ def test_wiki_sqa(app_android):
     add_video(browser)
 
 
-def test_wiki_appium(app_android):
+def test_appium_search():
     with step('Type search appium'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Appium")
@@ -39,7 +39,7 @@ def test_wiki_appium(app_android):
     add_video(browser)
 
 
-def test_wiki_api_search(app_android):
+def test_api_search():
     with step('Type search api'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Api")
@@ -50,7 +50,7 @@ def test_wiki_api_search(app_android):
     add_video(browser)
 
 
-def test_wiki_selenium_search(app_android):
+def test_selenium_search():
     with step('Type search android'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Selenium")

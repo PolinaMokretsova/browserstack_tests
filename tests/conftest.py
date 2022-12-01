@@ -14,7 +14,8 @@ def load_env():
     """
     load_dotenv()
 
-@pytest.fixture(scope='function')
+
+@pytest.fixture(scope='function', autouse=True)
 def app_android():
     """
     Create driver
